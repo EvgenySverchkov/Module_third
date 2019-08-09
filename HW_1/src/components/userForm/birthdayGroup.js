@@ -1,21 +1,7 @@
 import React from "react";
 
-function BirthdayInput(){
-	return (
-		<input
-			type="date"
-			className ="form-control"
-			id="birthday"
-			placeholder="Birthday" 
-		/>
-		);
-}
-
-function BirthdayLabel(){
-	return (
-		<label forhtml="birthday">Enter your birthday</label>
-		);
-}
+import BirthdayLabel from "./BirthdayLabel";
+import BirthdayInput from "./BirthdayInput";
 
 export default function AgeGroup() {
 	return (

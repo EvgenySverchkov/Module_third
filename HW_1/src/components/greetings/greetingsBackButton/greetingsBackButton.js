@@ -1,9 +1,15 @@
 import React from "react";
+import PropTypes from "prop-types";
+
 import "./greetingsBackButton.css";
 
-export default props => {
+export default function GreetingsBackButton({ onPress }){
 	return(
 		<span 
 			className="back-button"
-			onClick={props.onPress}>←</span>);
-		} 
+			onClick={onPress}>←</span>);
+}
+
+GreetingsBackButton.propTypes = {
+	onPress: PropTypes.func
+}

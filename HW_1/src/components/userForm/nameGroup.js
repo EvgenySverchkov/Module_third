@@ -1,26 +1,13 @@
 import React from "react";
 
-function NameInput(props){
-	return (
-		<input
-			type="text"
-			className="form-control"
-			id="name"
-			placeholder="Name"
-		/>);
-}
+import NameLabel from "./NameLabel";
+import NameInput from "./NameInput";
 
-function NameLabel(){
-	return (
-		<label forhtml="name">What is your name?</label>
-	);
-}
-
-export default function NameGroup(props){
+export default function NameGroup(){
 	return (
 		<div className="form-group">
 			<NameLabel/>
-			<NameInput value={props.value}/>
+			<NameInput/>
 		</div>
 	);
 }

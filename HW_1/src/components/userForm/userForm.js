@@ -1,6 +1,8 @@
 import { getDataFromForm } from "../../services/formUtils";
 
 import React from "react";
+import PropTypes from 'prop-types';
+
 import NameGroup from "./nameGroup";
 import BirthdayGroup from "./birthdayGroup";
 import SubmitButton from "./submitButton";
@@ -20,29 +22,6 @@ export default class UserForm extends React.Component{
 	};
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-/*export default function UserForm({ onSubmit = noop } = {}){
-	const _onSubmit = e => {
-    e.preventDefault();
-    onSubmit(getDataFromForm(<NameGroup/>));
-  };
-
-	return (
-		<form>
-			<NameGroup/>
-			<BirthdayGroup/>
-			<SubmitButton listener = {_onSubmit}/>
-		</form>
-		);
-}*/
+UserForm.propTypes = {
+	formHeader: PropTypes.func
+};

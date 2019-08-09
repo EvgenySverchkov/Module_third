@@ -1,4 +1,6 @@
 import React from "react";
+import PropTypes from "prop-types";
+
 import { daysToDate } from "../../services/date";
 
 function getCorrectUserName(name) {
@@ -19,10 +21,14 @@ function getTextByBirthday(name, date) {
 }
 
 export default function GreetingsLabel(props){
-	const { name, birthday } = props.data;
+	const { name, birthday } = props.userData;
 	const userName = getCorrectUserName(name);
 	const label = getTextByBirthday(userName, birthday);
 	return (
 		<span>{label}</span>
 		);
 }
+
+GreetingsLabel.propTypes = {
+  userData: PropTypes.object
+};
