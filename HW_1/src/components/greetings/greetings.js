@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 import GreetingsLabel from "./GreetingsLabel";
-import BackButton from "./greetingsBackButton";
+import BackButton from "./GreetingsBackButton";
 
 export default function Greetings(props){
 	return(
