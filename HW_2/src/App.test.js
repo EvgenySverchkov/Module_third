@@ -1,9 +1,22 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
+import { shallow, mount } from 'enzyme';
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
-  ReactDOM.unmountComponentAtNode(div);
+import Profile from './components/Profile.js';
+import App from './App.js';
+
+
+
+describe("App tests", ()=>{
+	it("snapshot test for App", ()=>{
+		const wraper = shallow(<App />);
+		expect(wraper.debug()).toMatchSnapshot();
+	});
+
+	it("test default component (Profile)", ()=>{
+		const wraper = shallow(<App />);
+
+		const profile = wraper.find('Profile');
+		profile.simulate('submit');
+		expect(wraper.state('isTable')).toEqual(false);
+	});
 });

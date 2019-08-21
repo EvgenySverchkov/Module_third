@@ -18,7 +18,6 @@ class App extends React.Component{
 		}else{
 			this.setState({isTable:true});
 		}
-
 	}
 	backHandler(){
 		this.setState({isTable:false});
