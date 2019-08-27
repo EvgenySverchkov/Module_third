@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Profile tets snapshot test for Profile 1`] = `
+"<Fragment>
+  <form className=\\"form-inline\\" onSubmit={[Function: onSubmit]}>
+    <div className=\\"form-group mb-2\\">
+      <label forhtml=\\"userId\\" className=\\"col-lm-2 col-form-label\\">
+        Input userId
+      </label>
+    </div>
+    <div className=\\"form-group mx-sm-3 mb-2\\">
+      <input type=\\"number\\" id=\\"userId\\" className=\\"form-control\\" placeholder=\\"Eneter id\\" />
+    </div>
+    <button type=\\"submit\\" className=\\"btn btn-primary mb-2\\">
+      Submit
+    </button>
+  </form>
+</Fragment>"
+`;
