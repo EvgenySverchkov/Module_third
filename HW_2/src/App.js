@@ -24,15 +24,13 @@ class App extends React.Component{
 	}
 	render(){
 		const isTable = this.state.isTable;
-		let component = null;
 		if(isTable){
-			component = <UserInfoTable idUser={this.userId} backHandler ={this.backHandler}/>;
+			return <UserInfoTable idUser={this.userId} backHandler ={this.backHandler}/>;
 		}
 		
 		else{
-			component = <Profile header={this.onSubmit}/>;
+			return <Profile headerForSubmit={this.onSubmit}/>;
 		}
-		return component;
 	}
 }
 
